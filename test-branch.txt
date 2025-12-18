@@ -1,0 +1,5 @@
+我爱中国，哈哈哈哈哈哈哈哈！
+我爱中国
+这是测试Git分支操作的文件
+创建时间：2024年
+分支：feature/add-shopping-cart → master
