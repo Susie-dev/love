@@ -9,15 +9,13 @@ public class CStaticAnalyzerTest {
     private static final Logger logger = LoggerFactory.getLogger(CStaticAnalyzerTest.class);
     private final CStaticAnalyzer analyzer = new CStaticAnalyzer();
 
-    // 测试合法C文件
     @Test
     public void testAnalyzeValidCFile() {
-        String validCPath = "src/test/resources/test-cases/valid.c";
-        boolean result = analyzer.analyzeCFile(validCPath);
-        assertTrue("合法C文件分析失败", result);
+        String validPath = "src/test/resources/test-cases/valid.c";
+        boolean result = analyzer.analyzeCFile(validPath);
+        assertTrue("合法文件分析失败", result);
     }
 
-    // 测试不存在的文件
     @Test
     public void testAnalyzeNonExistentFile() {
         String nonExistentPath = "src/test/resources/test-cases/none.c";
@@ -25,7 +23,6 @@ public class CStaticAnalyzerTest {
         assertFalse("不存在的文件分析应返回false", result);
     }
 
-    // 测试非C文件
     @Test
     public void testAnalyzeNonCFile() {
         String nonCPath = "src/test/resources/test-cases/valid.txt";
